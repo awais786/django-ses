@@ -99,10 +99,10 @@ jobs:
           python -m pip install --upgrade tox tox-gh-actions
 
       - name: Tox tests
-          run: |
-            tox -v
-          env:
-            DJANGO: ${{ matrix.django-version }}
+        run: |
+          tox -v
+        env:
+          DJANGO: ${{ matrix.django-version }}
 
 #          pip install -e .
 #          pip install "django~=${{ matrix.django-version }}.0"
