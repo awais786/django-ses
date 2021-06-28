@@ -93,10 +93,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
-      - name: Install tox
-        run: pip install tox
-      - name: Test with tox ${{ matrix.env.TOXENV }}
-        env: ${{ matrix.env }}
+      - name: Run Tests
+        env:
+          TOXENV: python${{ matrix.python-version }}-${{ matrix.toxenv }}
         run: tox
 
 #          pip install -e .
