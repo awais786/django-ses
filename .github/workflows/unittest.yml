@@ -95,8 +95,18 @@ jobs:
       - uses: actions/setup-python@v2
       - name: Install Dependencies
         run: |
-          pip install -e .
-          pip install "django~=${{ matrix.django-version }}.0"
-      - name: Run Test
-        run: |
-          python runtests.py
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade tox tox-gh-actions
+
+      - name: Tox tests
+          run: |
+            tox -v
+          env:
+            DJANGO: ${{ matrix.django-version }}
+
+#          pip install -e .
+#          pip install "django~=${{ matrix.django-version }}.0"
+
+#      - name: Run Test
+#        run: |
+#          python runtests.py
