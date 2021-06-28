@@ -19,74 +19,72 @@ jobs:
       matrix:
         python-version: [2.7, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9]
         django-version: [1.11, 2.2, 3.0, 3.1, 3.2]
-        include:
-          - python-version: 2.7
-            django-version: Django==1.11
+          include:
+            - python-version: 2.7
+              django-version: Django==1.11
 
-          - python-version: 3.4
-            django-version: Django==1.11
+            - python-version: 3.4
+              django-version: Django==1.11
 
-          - python-version: 3.4
-            django-version: Django==2.0
+            - python-version: 3.4
+              django-version: Django==2.0
 
-          - python-version: 3.5
-            django-version: Django==1.11
+            - python-version: 3.5
+              django-version: Django==1.11
 
-          - python-version: 3.5
-            django-version: Django==2.0
+            - python-version: 3.5
+              django-version: Django==2.0
 
-          - python-version: 3.5
-            django-version: Django==2.2
+            - python-version: 3.5
+              django-version: Django==2.2
 
-          - python-version: 3.6
-            django-version: Django==2.2
+            - python-version: 3.6
+              django-version: Django==2.2
 
-          - python-version: 3.6
-            django-version: Django==3.0
+            - python-version: 3.6
+              django-version: Django==3.0
 
-          - python-version: 3.6
-            django-version: Django==3.1
+            - python-version: 3.6
+              django-version: Django==3.1
 
-          - python-version: 3.6
-            django-version: Django==3.2
+            - python-version: 3.6
+              django-version: Django==3.2
 
-          - python-version: 3.7
-            django-version: Django==2.2
+            - python-version: 3.7
+              django-version: Django==2.2
 
-          - python-version: 3.7
-            django-version: Django==3.0
+            - python-version: 3.7
+              django-version: Django==3.0
 
-          - python-version: 3.7
-            django-version: Django==3.1
+            - python-version: 3.7
+              django-version: Django==3.1
 
-          - python-version: 3.7
-            django-version: Django==3.2
+            - python-version: 3.7
+              django-version: Django==3.2
 
-          - python-version: 3.8
-            django-version: Django==2.2
+            - python-version: 3.8
+              django-version: Django==2.2
 
-          - python-version: 3.8
-            django-version: Django==3.0
+            - python-version: 3.8
+              django-version: Django==3.0
 
-          - python-version: 3.8
-            django-version: Django==3.1
+            - python-version: 3.8
+              django-version: Django==3.1
 
-          - python-version: 3.8
-            django-version: Django==3.2
+            - python-version: 3.8
+              django-version: Django==3.2
 
-          - python-version: 3.9
-            django-version: Django==2.2
+            - python-version: 3.9
+              django-version: Django==2.2
 
-          - python-version: 3.9
-            django-version: Django==3.0
+            - python-version: 3.9
+              django-version: Django==3.0
 
-          - python-version: 3.9
-            django-version: Django==3.1
+            - python-version: 3.9
+              django-version: Django==3.1
 
-          - python-version: 3.9
-            django-version: Django==3.2
-
-
+            - python-version: 3.9
+              django-version: Django==3.2
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
