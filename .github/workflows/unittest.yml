@@ -97,7 +97,7 @@ jobs:
         run: pip install tox
       - name: Run Tests
         env:
-          TOXENV: python${{ matrix.python-version }}-${{ matrix.django-version }}
+          TOXENV: python${{ matrix.python-version }}-django${{ matrix.django-version }}
         run: tox
 
 #          pip install -e .
