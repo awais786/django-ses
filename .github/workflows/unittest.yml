@@ -119,6 +119,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -e .
+          pip install "django~=${{ matrix.django-version }}.0"
       - name: Run Test
         run: |
           python runtests.py
